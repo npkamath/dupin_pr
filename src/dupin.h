@@ -37,7 +37,7 @@ private:
         int getSize() const {
             return size;
         }
-        
+
     };
     upper_triangular_cost_matrix cost_matrix;
     // Struct for memoization key, combining start, end, and number of breakpoints.
@@ -69,7 +69,7 @@ private:
     int min_size; // Minimum size of a segment.
     Eigen::MatrixXd datum; // Matrix storing the dataset.
 
-    
+
 
     // Structure for storing linear regression parameters.
     struct linear_fit_struct {
@@ -86,7 +86,7 @@ public:
 
     // Scales the dataset using min-max normalization.
     void scale_datum();
-    
+
     // Prepares data for linear regression.
     void regression_setup(linear_fit_struct& lfit);
 
@@ -108,7 +108,7 @@ public:
     // Recursive function for dynamic programming segmentation.
     std::pair<double, std::vector<int>> seg(int start, int end, int num_bkps);
 
-    void set_parallelization(int num_threads); 
+    void set_parallelization(int num_threads);
     // Returns the optimal set of breakpoints after segmentation.
     std::vector<int> return_breakpoints();
 
